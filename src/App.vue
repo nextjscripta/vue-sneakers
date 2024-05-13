@@ -1,17 +1,15 @@
 <script setup>
-import MyHello from '@/components/MyHello.vue'
-import Product from '@/components/Product.vue'
+import Header from '@/components/Header.vue'
+import CardList from '@/components/CardList.vue'
+import Drawer from '@/components/Drawer.vue'
+
 </script>
 
 <template>
+  <Drawer/>
+  <div class="w-4/5 m-auto bg-white rounded-xl mt-14 shadow-xl">
+    <Header/>
+    <CardList/>
 
-<!--  <MyHello/>-->
-
-  <Product title="Nike" description="New design" :price='200'/>
-  <Product />
-  <Product/>
+  </div>
 </template>
-
-<style scoped>
-
-</style>
