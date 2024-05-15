@@ -1,25 +1,29 @@
 <script setup>
 import Card from '@/components/Card.vue'
 
-
-const isFavoriteClicked = () => {
-  alert('clicked')
-}
-
-const isAddClicked = () => {
- alert('clicked')
-}
-
 </script>
 
 <template>
-  <div class="flex flex-wrap justify-between items-center pt-10 mx-10">
+  <div class="flex flex-wrap gap-4 justify-center md:justify-between items-center pt-10 mx-10">
     <h2 class="text-3xl font-bold ">Все кроссовки</h2>
-    <input type="text" placeholder="Поиск..." class="border border-slate-300 px-5 py-2 rounded-2xl">
+    <div class="flex gap-5 items-center">
+      <span>Сортировать</span>
+      <select class="border rounded-2xl py-3 px-7">
+        <option value="name">По названию</option>
+        <option value="des">По цене (дешевые)</option>
+        <option value="asc">По цене (доорогие)</option>
+      </select>
+    </div>
+    <div class="relative">
+      <img src="/search.svg" alt="search icon" class="absolute top-3.5 left-3">
+    <input type="text" placeholder="Поиск..." class="border border-slate-300 pl-8 pr-5 py-2 rounded-2xl">
+    </div>
   </div>
-  <div class="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 p-10 justify-center">
+  <div class="grid justify-items-center md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 p-10 justify-center">
+    <Card title="Мужские Кроссовки" price="12 999" image="/sneakers/sneakers-1.jpg"/>
     <Card title="Мужские Кроссовки" price="12 999" image="/sneakers/sneakers-2.jpg"/>
+    <Card title="Мужские Кроссовки" price="12 999" image="/sneakers/sneakers-3.jpg"/>
+    <Card title="Мужские Кроссовки" price="12 999" image="/sneakers/sneakers-4.jpg"/>
+    <Card title="Мужские Кроссовки" price="12 999" image="/sneakers/sneakers-5.jpg"/>
   </div>
 </template>
-
-<style scoped></style>
