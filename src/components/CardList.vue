@@ -3,7 +3,8 @@ import Card from '@/components/Card.vue'
 
 defineProps({
   items: Array,
-  isSortedBy: Function
+  isSortedBy: Function,
+  isSearchParams: Function
 })
 </script>
 
@@ -21,6 +22,7 @@ defineProps({
     <div class="relative">
       <img src="/search.svg" alt="search icon" class="absolute top-3.5 left-3" />
       <input
+        @input="isSearchParams"
         type="text"
         placeholder="Поиск..."
         class="border border-slate-300 pl-8 pr-5 py-2 rounded-2xl"
