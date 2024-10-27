@@ -17,6 +17,7 @@ const fetchData = async () => {
       sortBy: sortRef.sortBy
     }
     if (sortRef.searchParams) {
+      console.log(sortedRef)
         params.title = `*${sortRef.searchParams}*`
     }
 
